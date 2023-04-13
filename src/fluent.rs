@@ -17,12 +17,12 @@ pub struct SayHelloBuilder {
 }
 
 impl SayHelloBuilder {
-    pub fn first_name(&mut self, input: &str) -> &mut Self {
-        self.first_name = input.to_owned();
+    pub fn first_name(&mut self, s: &str) -> &mut Self {
+        self.first_name = s.to_owned();
         self
     }
-    pub fn last_name(&mut self, input: &str) -> &mut Self {
-        self.last_name = input.to_owned();
+    pub fn last_name(&mut self, s: &str) -> &mut Self {
+        self.last_name = s.to_owned();
         self
     }
 
