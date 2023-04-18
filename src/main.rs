@@ -6,9 +6,11 @@ mod simple;
 fn main() {
     // mutable input struct is a simpler implementation
     let client = SimpleClient::new();
-    let mut input = SayHelloInput::default();
-    input.first_name = "Foo".to_owned();
-    input.last_name = "Bar".to_owned();
+    let input = SayHelloInput {
+        first_name: "Foo".to_owned(),
+        last_name: "Bar".to_owned(),
+        ..SayHelloInput::default()
+    };
     client.say_hello(input);
 
     // fluent builder has pretty function chaining
