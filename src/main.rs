@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use fluent::FluentBuilderClient;
 use simple::{SayHelloInput, SimpleClient};
 mod fluent;
